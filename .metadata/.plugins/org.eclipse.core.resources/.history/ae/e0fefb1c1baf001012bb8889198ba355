@@ -1,0 +1,8 @@
+package com.astik.feignclient;
+
+import org.springframework.cloud.openfeign.FeignClient;
+
+@FeignClient("payment-service")
+public interface PaymentFeignClient {
+
+}

@@ -1,0 +1,42 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "AmazonServicesRegistryApplication",
+            "request": "launch",
+            "mainClass": "com.astik.AmazonServicesRegistryApplication",
+            "projectName": "amazon-services-registry"
+        },
+        {
+            "type": "java",
+            "name": "AmazonConfigServerApplication",
+            "request": "launch",
+            "mainClass": "com.astik.AmazonConfigServerApplication",
+            "projectName": "amazon-config-server"
+        },
+        {
+            "type": "java",
+            "name": "AmazonApiGatewayApplication",
+            "request": "launch",
+            "mainClass": "com.astik.AmazonApiGatewayApplication",
+            "projectName": "amazon-api-gateway"
+        },
+        {
+            "type": "java",
+            "name": "PaymentServiceApplication",
+            "request": "launch",
+            "mainClass": "com.astik.PaymentServiceApplication",
+            "projectName": "payment-service"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-UserServiceApplication<user-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "com.astik.UserServiceApplication",
+            "projectName": "user-service",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

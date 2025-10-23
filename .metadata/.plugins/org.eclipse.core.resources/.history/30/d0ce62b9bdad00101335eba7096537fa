@@ -1,0 +1,31 @@
+spring.application.name=amazon-api-gateway
+server.port=8084
+
+#server.servlet.context-path=/api
+
+logging.level.org.springframework:debug
+
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka/
+
+
+
+# ===========================
+# User Service Route
+# ===========================
+spring.cloud.gateway.server.webflux.routes[0].id=user-service
+spring.cloud.gateway.server.webflux.routes[0].uri=lb://user-service
+spring.cloud.gateway.server.webflux.routes[0].predicates[0]=Path=/user/**
+
+# ===========================
+# Order Service Route
+# ===========================
+spring.cloud.gateway.server.webflux.routes[1].id=order-service
+spring.cloud.gateway.server.webflux.routes[1].uri=lb://order-service
+spring.cloud.gateway.server.webflux.routes[1].predicates[0]=Path=/order/**
+
+# ===========================
+# Payment Service Route
+# ===========================
+spring.cloud.gateway.server.webflux.routes[2].id=payment-service
+spring.cloud.gateway.server.webflux.routes[2].uri=lb://payment-service
+spring.cloud.gateway.server.webflux.routes[2].predicates[0]=Path=/payment/**

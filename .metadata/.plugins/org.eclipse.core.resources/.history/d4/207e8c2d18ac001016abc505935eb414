@@ -1,0 +1,11 @@
+package com.astik.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.astik.entity.UserInformation;
+
+@Repository
+public class UserRepository implements JpaRepository<UserInformation, String>{
+
+}

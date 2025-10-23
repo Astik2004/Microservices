@@ -1,0 +1,25 @@
+package com.astik.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.astik.entity.UserInformation;
+import com.astik.repository.UserRepository;
+
+@Service
+public class UserService {
+
+	@Autowired
+	UserRepository userRepository;
+	
+	public String createUser(UserInformation user) {
+		userRepository.save(user);
+		return "User Created Succesfully";
+	}
+
+	public UserInformation getUserInfo(String emailId) 
+	{
+		return userRepository.findById(emailId).get();
+	}
+	
+}

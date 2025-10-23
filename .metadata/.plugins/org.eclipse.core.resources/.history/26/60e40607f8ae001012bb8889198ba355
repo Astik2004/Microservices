@@ -1,0 +1,14 @@
+package com.astik.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.astik.repository.OrderRepository;
+
+@Service
+public class OrderService {
+	
+	@Autowired
+	OrderRepository orderRepository;
+
+}

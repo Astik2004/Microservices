@@ -1,0 +1,31 @@
+package com.astik.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.astik.entity.UserInformation;
+import com.astik.service.UserService;
+
+@RestController
+public class UserController {
+	
+	@Autowired
+	UserService userService;
+	
+	@PostMapping()
+	public String createUser(@RequestBody UserInformation user)
+	{
+		return userService.createUser(user);
+	}
+	
+	@GetMapping("/getinfo/{emailId}")
+	public UserInformation getUserInfo(@PathVariable String emailId)
+	{
+		return userService.getUserInfo(emailId);
+	}
+
+}

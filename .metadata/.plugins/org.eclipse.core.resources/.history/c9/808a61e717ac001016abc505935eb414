@@ -1,0 +1,5 @@
+package com.astik.entity;
+
+public class UserInformation {
+
+}

@@ -1,0 +1,13 @@
+package com.astik;
+
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.SpringBootApplication;
+
+@SpringBootApplication
+public class AmazonConfigServerApplication {
+
+	public static void main(String[] args) {
+		SpringApplication.run(AmazonConfigServerApplication.class, args);
+	}
+
+}

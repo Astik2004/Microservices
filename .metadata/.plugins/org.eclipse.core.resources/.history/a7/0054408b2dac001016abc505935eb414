@@ -1,0 +1,5 @@
+package com.astik.dto;
+
+public class NetBankInfo {
+
+}
